@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.Titulo{
+text-align: center;
+font-style: inherit;
+}
+
+Strong{
+    color: #febe01;
+}
+
+div{
+  margin: 40px;
+  color: white;
+  background-color: #111;
+  padding: 25px 30px 40px;
+  text-align: left;
+}
+
+span{
+    color: #febe01;
+}
+
+a{
+text-decoration: none;
+border: none;
+color: #320;
+font-size: small;
+font-weight: 600;
+background-color: #febe01;
+padding: 10px;
+border-radius: 5px;
+}

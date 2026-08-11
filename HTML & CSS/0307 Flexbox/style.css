@@ -1,0 +1,124 @@
+/* Flexbox – Resumo
+
+Ativa com:
+
+css
+display: flex;
+
+No container (pai):
+
+flex-direction → direção dos itens
+
+css
+row           horizontal (padrão) 
+column        vertical 
+row-reverse   horizontal invertido 
+column-reverse  vertical invertido 
+
+flex-wrap → se os itens quebram linha ou não
+
+css
+nowrap   tudo numa linha (padrão) 
+wrap     quebra linha quando necessário 
+
+justify-content → alinha no eixo principal (horizontal se row, vertical se column)
+
+css
+flex-start | flex-end | center | space-between | space-around | space-evenly
+
+align-items → alinha no eixo secundário
+
+css
+flex-start | flex-end | center | stretch | baseline
+
+gap → espaço entre os itens
+
+css
+gap: 20px;
+
+Nos itens (filhos):
+
+flex → atalho pra crescer/encolher/tamanho base
+
+css
+flex: 1;         item cresce pra preencher o espaço 
+flex: 0 0 200px  não cresce, não encolhe, fica em 200px 
+
+align-self → alinha um item específico (sobrescreve o align-items)
+
+css
+flex-start | flex-end | center | stretch
+
+order → muda a ordem visual do item
+
+css
+order: 2;  padrão é 0, menor valor aparece primeiro 
+
+💡 Flexbox é ideal pra layouts em uma direção (linha ou coluna). Pra layouts bidimensionais (linha E coluna ao mesmo tempo), use Grid! 
+GAP: mesma coisa que o margin-right, coloca um espaçamento entre elementos
+
+    flex-wrap: wrap; indica se os elementos devem quebrar em uma nova linha ou não
+
+flex-grow → define se o item cresce pra ocupar espaço vazio
+
+css
+flex-grow: 0;   não cresce (padrão) 
+flex-grow: 1;   cresce pra preencher o espaço 
+flex-grow: 2;   cresce o dobro em relação aos de flex-grow: 1 
+
+funciona igual ao fr do Grid!
+
+flex-basis → define o tamanho inicial do item antes de distribuir o espaço
+
+css
+flex-basis: 200px;  item começa com 200px, depois cresce/encolhe 
+
+flex-shrink → define se o item pode encolher quando faltar espaço
+
+css
+flex-shrink: 1;   pode encolher (padrão) 
+flex-shrink: 0;   não encolhe, mantém o tamanho do flex-basis 
+
+flex → atalho pros três acima
+
+css
+flex: 1;
+ equivale a: flex-grow: 1; flex-shrink: 1; flex-basis: 0; 
+
+flex: 0 0 200px;
+ grow: 0 | shrink: 0 | basis: 200px 
+ = não cresce, não encolhe, fica fixo em 200px 
+
+💡 Na maioria dos casos flex: 1 já resolve — ele faz o item crescer igualmente junto com os outros!
+
+*/
+
+.flex{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+body{
+    margin: 0px;
+}
+
+h2{
+    background: #e7e7e7;
+    border: 1px solid #d7d7d7;
+    padding: 20px;
+    margin: 0px;
+    flex-grow: 1;
+    flex-basis: auto;
+    flex-shrink: 1;
+    flex: 1;
+}
+
+.grid{
+    margin-top: 60px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto)); /* auto fit pede para que ele encaixe quantos items conseguir */
+    gap: 20px;
+}
+
+

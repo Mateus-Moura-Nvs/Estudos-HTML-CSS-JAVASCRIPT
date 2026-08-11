@@ -1,0 +1,51 @@
+/* 
+    Justify-content: Alinha e distribui os elementos ao longo do eixo principal (geralmente a horizontal) no Flexbox ou Grid. 
+    Controla se os itens ficam colados (no início, centro, fim) ou espalhados com espaçamentos automáticos entre eles
+
+    Precisa do display flex ou display grid para funcionar!
+
+   grid-template-columns: auto auto;
+   Define duas colunas cuja largura se adapta automaticamente ao tamanho do conteúdo. 
+   Cada coluna tenta se expandir para que seu conteúdo caiba perfeitamente em uma única linha, sem quebrar o texto. 
+*/
+
+h1{
+  text-align: center;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  grid-template-columns: 1fr 1fr;
+}
+
+h2{
+  margin-top: 0px;
+}
+
+.Comprar{
+  background: #a8f;
+  padding: 10px 20px;
+  color: #103;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.item{
+  background: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  padding: 20px;
+  border-radius: 20px;
+  display: grid;
+}
+
+.grid{
+  display: grid;
+  /* grid-template-columns: 200px 200px; */
+  /* grid-template-columns: 50% 50%; da problema pq pode comer parte da página, fazendo com que crie uma barra de movimentação horizontal na página */
+  grid-template-columns: auto auto ;
+  /* gap: 20px; até em gap da problema, pois pode fazer uma separação desconfigurada */
+  gap: 20px;
+
+  justify-content: space-evenly;
+  align-content: center;
+}

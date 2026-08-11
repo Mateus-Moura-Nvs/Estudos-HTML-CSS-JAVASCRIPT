@@ -1,0 +1,58 @@
+/* 
+position: fixed;  -> fixa o elemento na tela
+top, right, left, bottom  -> define o posicionamento dos elementos que 
+não estão no fluxo padrão
+
+z-index controla a ordem de profundidade dos elementos — qual fica na frente e qual fica atrás quando eles se sobrepõem.
+
+Pensa num eixo Z (profundidade), além do X e Y que você já conhece:
+
+z-index: 3  → mais na frente
+z-index: 2  → no meio
+z-index: 1  → mais atrás
+
+Exemplo prático:
+
+css
+.caixa-vermelha {
+    z-index: 1;  fica atrás 
+}
+
+.caixa-azul {
+    z-index: 2;  fica na frente 
+}
+
+Regras importantes:
+
+Só funciona em elementos com position definido (relative, absolute, fixed ou sticky)
+O valor padrão é auto (segue a ordem do HTML — o último elemento fica na frente)
+Aceita valores negativos (z-index: -1 joga o elemento pra trás de tudo)
+
+Uso mais comum na prática:
+
+css
+ modal/popup sempre na frente de tudo 
+.modal {
+    position: fixed;
+    z-index: 9999;
+}
+
+ header fixo acima do conteúdo 
+.header {
+    position: fixed;
+    z-index: 100;
+}
+*/
+
+h1{
+    margin: 0px;
+    padding: 10px;
+    background: lightblue;
+}
+
+.index1{
+    position: relative;
+    background: red;
+    top: 60px;
+    z-index: -1;
+}

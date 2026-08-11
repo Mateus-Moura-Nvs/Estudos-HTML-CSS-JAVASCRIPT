@@ -1,0 +1,28 @@
+h1{
+    background: #ddd;
+    width: 300px;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+span,
+Strong{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+div, p{
+     border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+a{
+    padding: 40px;
+    border: 2px solid rgba(0, 0, 255, 0.5);  
+    display: inline-block;
+}
+/* 
+a linha " display: inline-block; " 
+funciona para fazer algum elemento inline respeitar as formatações de padding, width, height, e margin
+pois os elementos inline não respeitam essa formatação e caso vc coloque uma borda eles não funcionaram direito
+Elementos que são inline
+
+<span>, <a>, <strong> e <em>
+*/

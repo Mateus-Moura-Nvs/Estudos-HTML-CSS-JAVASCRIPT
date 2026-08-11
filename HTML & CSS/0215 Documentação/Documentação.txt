@@ -1,0 +1,63 @@
+Link de documentação Programação WEB
+
+
+Mozilla:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+W3C:
+https://www.w3.org/TR/
+
+
+para imagens:
+https://unsplash.com/pt-br
+
+======================================================================
+   📏 GUIA SUPREMO DE ESPAÇAMENTO E PROPRIEDADES DE BLOCO
+   ======================================================================
+   
+   1. MARGIN (Margem Externa)
+   * O que faz: Cria espaço DO LADO DE FORA do elemento (afasta os vizinhos).
+   * Atalhos de escrita (sentido horário):
+     - margin: 20px;                   -> 20px em TODOS os lados.
+     - margin: 10px 20px;              -> 10px (Cima/Baixo) | 20px (Esquerda/Direita).
+     - margin: 10px 20px 30px 40px;    -> Cima | Direita | Baixo | Esquerda (Relógio! 🕒).
+   * Macete: 'margin: 0 auto;' centraliza blocos horizontalmente na tela!
+
+   2. PADDING (Margem Interna / Preenchimento)
+   * O que faz: Cria espaço DO LADO DE DENTRO do elemento (empurra o conteúdo).
+   * Muito usado para dar corpo a botões ou afastar textos das bordas de um card.
+   * Segue a mesma lógica de atalhos do margin (sentido horário).
+
+   3. WIDTH & HEIGHT (Largura e Altura)
+   * width: Controla a largura horizontal do elemento (ex: width: 300px; ou 50%).
+   * height: Controla a altura vertical.
+   * Macete: Evite definir 'height' fixo em blocos com texto, deixe o conteúdo 
+     definir a altura naturalmente para não vazar quando a tela encolher!
+
+   4. BOX-SIZING (O Salvador de Layouts!)
+   * Por padrão, se você tem uma div de 100px de largura e coloca 10px de padding,
+     o navegador deixa ela com 120px total (soma tudo). Uma bagunça!
+   * Resolva isso aplicando:
+     box-sizing: border-box;
+   * O que faz: Garante que o tamanho que você definiu no 'width' seja o tamanho 
+     FINAL do elemento, espremendo o padding para dentro em vez de esticar tudo.
+   ======================================================================
+
+===================================================================================
+  📏 GUIA CSS GRID LAYOUT
+
+    Guia Origamid:
+
+    https://www.origamid.com/projetos/grid/
+
+    https://www.origamid.com/projetos/css-grid-layout-guia-completo/
+
+    Outros guias:
+
+    https://grid.malven.co/
+
+    https://css-tricks.com/snippets/css/complete-guide-grid/
+    
+===================================================================================

@@ -1,0 +1,139 @@
+/* Grid – Linhas (Rows)
+
+grid-template-rows → define o tamanho manual das linhas
+
+css
+grid-template-rows: 100px auto;
+1ª linha = 100px, 2ª linha = tamanho automático 
+
+grid-auto-rows → define o tamanho das linhas criadas automaticamente (quando o conteúdo ultrapassa as linhas definidas no template)
+
+css
+grid-auto-rows: 150px;
+
+grid-row → define em qual linha um item específico vai ficar, funciona igual ao grid-column
+
+css
+grid-row: 2;       ocupa a linha 2 
+grid-row: 1 / 3;   vai da linha 1 até a 3 (span) 
+
+💡 A diferença entre template-rows e auto-rows: o template é pra linhas que você já sabe que vão existir,
+ o auto é pra linhas que surgem dinamicamente conforme o conteúdo cresce. 
+
+ grid-template-rows: 300px; - Defini que a primeira linha tem 300 pixels
+ grid-auto-rows: 200px; - defini automaticamente o tamanho de todas as novas linhas como 200 pixels
+
+O repeat() é uma função do CSS Grid que evita repetição na hora de definir colunas/linhas:
+
+Sem repeat:
+
+css
+grid-template-columns: 1fr 1fr 1fr 1fr;
+
+Com repeat:
+
+css
+grid-template-columns: repeat(4, 1fr);
+                              ↑   ↑
+                          quantas  tamanho 
+
+Os dois fazem a mesma coisa!
+
+Outros exemplos:
+
+css
+3 colunas de 200px
+grid-template-columns: repeat(3, 200px);
+
+misturando com outros valores
+grid-template-columns: 100px repeat(2, 1fr) 100px;
+resultado: 100px | 1fr | 1fr | 100px
+
+Dois valores especiais muito usados:
+
+auto-fill → cria o máximo de colunas que couber no container
+
+css
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+auto-fit → igual ao auto-fill, mas estica as colunas pra preencher o espaço vazio
+
+💡 O combo repeat(auto-fill, minmax()) é muito usado pra grids responsivos sem media query!
+
+grid-row → define em qual linha o item fica
+
+css
+grid-row: 3;         item vai pra linha 3 
+grid-row: 1 / 3;     item começa na linha 1 e vai até a 3 
+
+grid-column → define em qual coluna o item fica
+
+css
+grid-column: 2;      item vai pra coluna 2 
+grid-column: 1 / 3;  item começa na coluna 1 e vai até a 3 
+
+grid-area → atalho pra definir linha e coluna ao mesmo tempo
+
+css
+grid-area: 2 / 2;
+            ↑   ↑
+          linha coluna 
+
+grid-area completo tem 4 valores:
+
+css
+grid-area: linha-inicio / coluna-inicio / linha-fim / coluna-fim;
+
+exemplo: 
+grid-area: 1 / 1 / 3 / 3;
+ começa na linha 1, coluna 1 e vai até linha 3, coluna 3 
+
+💡 O grid-area também pode receber um nome ao invés de números, quando usado junto com grid-template-areas no container 
+
+*/
+
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, auto) 1fr;
+    gap: 20px;
+    max-width: 600px;
+    place-items: start;
+}
+
+
+.foto {
+    max-width: 100%;
+    grid-column: 1;
+    grid-row: 2 / 5;
+}
+
+
+
+.comprar {
+    grid-column: 2;
+    grid-row: 4;
+    background-color: #a78bfa;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.titulo{
+    grid-column: 1 / -1;
+}

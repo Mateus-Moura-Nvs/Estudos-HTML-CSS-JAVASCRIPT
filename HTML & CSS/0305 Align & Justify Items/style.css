@@ -1,0 +1,71 @@
+/*  
+-> align-items: start | center | end | stretch
+Alinha os items na horizontal
+-> justify-items: start | center | end | stretch
+Alinha os items na vertical
+-> place-items: align justify
+AAtalho para align-items e juustify-items
+
+
+Grid – Alinhamento de Itens
+
+align-items → alinha os itens no eixo vertical (coluna)
+justify-items → alinha os itens no eixo horizontal (linha)
+place-items → atalho para align-items e justify-items ao mesmo tempo
+
+Valores possíveis: start | center | end | stretch
+
+align-self → alinha um item específico no eixo vertical (sobrescreve o align-items)
+justify-self → alinha um item específico no eixo horizontal (sobrescreve o justify-items)
+place-self → atalho para align-self e justify-self ao mesmo tempo
+
+Valores possíveis: start | center | end | stretch | auto
+
+💡 A diferença entre *-items e *-self é que o items aplica pra todos os itens do container, enquanto o self aplica só pro item individual.
+
+Valores de alinhamento:
+
+start → encosta o item no início da célula (topo no vertical, esquerda no horizontal)
+center → centraliza o item no meio da célula
+end → encosta o item no final da célula (baixo no vertical, direita no horizontal)
+stretch → estica o item para preencher toda a célula (comportamento padrão)
+
+💡 O stretch só funciona se o item não tiver tamanho fixo definido (width/height). Se tiver, ele age igual ao start.
+
+Quando você usa o atalho com dois valores:
+
+Ordem: align depois justify
+
+css
+place-items: end start;  
+              ^    ^ 
+              |    |
+        vertical  horizontal  
+
+Então place-items: end start significa:
+
+Vertical → end (item vai pro baixo da célula)
+Horizontal → start (item vai pra esquerda da célula)
+
+💡 Se passar um valor só (place-items: center), ele aplica o mesmo valor pros dois eixos.
+*/
+
+.grid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    place-items: end center;
+}
+
+
+/* Estilos Gerais */
+
+body{
+    font-family: arial;
+    margin: 40px;
+}
+
+h1, p{
+    margin: 0px;
+}
+

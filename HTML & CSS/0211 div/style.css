@@ -1,0 +1,19 @@
+
+/*
+padding = margem interna
+height(auto explicativo) = altura
+width = largura
+margin = margem de um certo elemento em relaação a página
+*/
+
+div{
+    background: aquamarine;
+    width: 140px;
+    height: 80px;
+    padding: 20px;
+    border: 10px solid black;
+    /* margin: 0px;*/
+}
+body{
+    margin: 0px;
+}

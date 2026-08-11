@@ -1,0 +1,58 @@
+
+/* 
+======================================================================
+💡 DISPLAY: INLINE-BLOCK
+======================================================================
+
+* O que faz:
+  Permite que os elementos fiquem LADO A LADO na mesma linha (como o 'inline'),
+  mas aceita que você mude a ALTURA, LARGURA e MARGENS (como o 'block').
+
+* Comparativo Rápido:
+
+  - inline       -> Fica lado a lado, mas IGNORE tamanho e margens C/B.
+  - block        -> Aceita tamanho e margens, mas OCUPA A LINHA TODA.
+  - inline-block -> Fica lado a lado E ACEITA tamanho e margens.
+
+* Quando usar:
+  - Botões lado a lado (com tamanho e padding definidos).
+  - Itens de menu de navegação.
+  - Cards de produtos em vitrines.
+======================================================================
+
+Exemplo de como utilizar Top, Right, Left, Bottom em um código
+
+
+button {
+         Top    Right   Bottom   Left 
+  padding: 10px    20px     15px    25px;
+}
+
+ou da pra fazer separadamente tambem
+da seguinte maneira:
+
+button {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+}
+
+div {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+
+  writing-mode: modo como as escritas estão na página
+
+*/
+
+h1{
+  writing-mode: vertical-lr;
+}
+
+h1{
+  margin-top: 30px;
+}
