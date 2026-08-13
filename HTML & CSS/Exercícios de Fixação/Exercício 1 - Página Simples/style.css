@@ -1,0 +1,30 @@
+body{
+    background: lightgray;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Titulo{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card{
+background: gray;
+border-radius: 4px;
+padding: 15px;
+}
+
+a{
+    text-decoration: none;
+    background: white;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 4px;
+}
