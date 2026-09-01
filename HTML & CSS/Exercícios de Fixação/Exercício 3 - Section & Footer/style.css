@@ -1,0 +1,50 @@
+body{
+    background: burlywood;
+    margin: 50px;
+}
+
+.Titulo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 60px;
+}
+
+.Navegar{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Navegar a{
+    text-decoration: none;
+    background: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.grids{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card a{
+    text-decoration: none;
+    background: white;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.card{
+    padding: 15px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+section{
+    background: brown;
+    text-align: center;
+}

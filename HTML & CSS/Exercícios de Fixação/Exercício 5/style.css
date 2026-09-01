@@ -1,0 +1,83 @@
+/* .botoes{
+display: flex;
+flex-direction: column;  
+gap: 5px;
+}  isso aqui tudo é para pegar os elementos a de uma mesma classe e deixa-los um abaixo do outro*/
+
+
+
+
+
+body{
+    background: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: solid black 10px;
+}
+
+/* HEADER */
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+.navegacao{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.navegacao a{
+text-decoration: none;
+color: whitesmoke;
+background: black;
+padding: 10px;
+border-radius: 5px;
+opacity: 0.7;
+font-size: 20px;
+}
+.avaliar{
+text-align: center;
+margin: 40px;
+}
+.avaliar a{
+text-decoration: none;
+color: black;
+background: whitesmoke;
+padding: 10px;
+border-radius: 6px;
+}
+
+/* CORPO DO SITE */
+
+h4{
+    font-size: 40px;
+    background: burlywood;
+
+}
+.cards{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+text-align: center;
+}
+.botoes{
+display: flex;
+flex-direction: column;  
+gap: 5px;
+}
+.botoes a{
+text-decoration: none;
+color: black;
+background: lightblue;
+padding: 10px;
+border-radius: 5px;
+margin:  10px;
+}
+
+.cards img{
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+/* FINALIZAÇÃO */
+footer{
+    text-align: center;
+}
