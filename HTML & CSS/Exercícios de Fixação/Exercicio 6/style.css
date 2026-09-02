@@ -1,0 +1,65 @@
+/* Formatação Geral */
+body{
+    background: lightgrey;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Titulo */
+header h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+}
+header nav{
+    text-align: center;
+}
+header a{
+    text-decoration: none;
+    background: whitesmoke;
+    padding: 5px;   
+    color: black;
+    border-radius: 5px;
+}
+
+/* quem somos nós */
+
+section{
+    text-align: center;
+}
+section a{
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: large;
+}
+
+
+/* CORPO */
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.card a{
+    text-decoration: none;
+    color: white;
+    background: gray;
+    padding: 10px;
+    font-size: large;
+    border-radius: 6px;
+}
+
+/* footer */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: larger;
+    opacity: 0.6;
+    text-align: center;
+}
