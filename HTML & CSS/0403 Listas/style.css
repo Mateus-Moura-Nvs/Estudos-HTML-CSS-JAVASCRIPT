@@ -1,0 +1,25 @@
+list-style → controla o marcador da lista
+
+ul {
+    list-style: disc;     /* bolinha preenchida (padrão) */
+    list-style: circle;   /* bolinha vazia */
+    list-style: square;   /* quadrado */
+    list-style: none;     /* remove o marcador */
+}
+
+ol {
+    list-style: decimal;      /* 1, 2, 3 (padrão) */
+    list-style: upper-roman;  /* I, II, III */
+    list-style: lower-alpha;  /* a, b, c */
+}
+
+/* Posição do marcador */
+ul {
+    list-style-position: outside; /* marcador fora do conteúdo (padrão) */
+    list-style-position: inside;  /* marcador dentro do conteúdo */
+}
+
+/* Imagem como marcador */
+ul {
+    list-style-image: url('./img/icone.png');
+}

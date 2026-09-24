@@ -1,0 +1,75 @@
+<!-- LANDMARKS - Tags semânticas do HTML5 -->
+
+<!-- <header> → Cabeçalho do site (logo, nav, info introdutória) 
+     ⚠️ Só vira landmark se NÃO estiver dentro de main, section, article ou aside -->
+
+<!-- <nav> → Menu de navegação -->
+
+<!-- <main> → Conteúdo principal da página -->
+
+<!-- <section aria-label="nome"> → Agrupa conteúdo por região/tema
+     ⚠️ O conteúdo precisa do contexto da página para fazer sentido -->
+
+<!-- <article aria-labelledby="id-do-titulo"> → Conteúdo autoexplicativo
+     (faz sentido sozinho, sem precisar do resto da página)
+     Ex: post de blog, card de produto, artigo -->
+
+<!-- <aside> → Conteúdo complementar ao principal
+     Ex: posts relacionados, glossário, informações extras -->
+
+<!-- <footer> → Rodapé da página -->
+
+<!-- aria-label → Título da região INVISÍVEL visualmente, mas lido pelo leitor de tela -->
+<!-- aria-labelledby → Aponta para um título que JÁ EXISTE na tela pelo id -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontos de Referência</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="" alt="">
+        <nav aria-label="Primaria">
+        <a href="/">Sobre</a>
+        <a href="/">Contato</a>
+        </nav>
+    </header>
+    
+    
+    <main>
+        <h1>Bicicletas Bikcraft</h1>
+        <p>Teste</p>
+    </main>  
+</body>
+
+
+<article aria-labelledby="Sobrebik">
+    <h2 id="Sobrebik">Sobre a Bikcraft</h2>
+    <p>A empresa foi fundada em 2014</p>
+</article>
+
+
+<section aria-label="Sobre a Surfbot">
+    <h2>Sobre a Surfbot</h2>
+    <p>A empresa foi fundada em 2014</p>
+</section>
+
+
+<div>
+    <h2>Sobre a Surfbot</h2>
+    <p>A empresa foi fundada em 2014</p>
+</div>
+
+
+<div>
+    <h2>Sobre a Surfbot</h2>
+    <p>A empresa foi fundada em 2014</p>
+</div>
+
+</html>
