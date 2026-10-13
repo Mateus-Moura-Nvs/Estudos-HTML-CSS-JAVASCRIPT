@@ -1,0 +1,96 @@
+/* =============================================
+   BACKGROUND
+   =============================================
+
+   background-color → cor de fundo
+   Exemplo: background-color: lightblue;
+
+   -----------------------------------------------
+
+   background-image → imagem de fundo
+   Exemplo: background-image: url("./img/bicicleta.jpg");
+
+   -----------------------------------------------
+
+   background-repeat → repetição da imagem
+   Exemplo: background-repeat: no-repeat;
+   Valores: repeat | no-repeat | repeat-x | repeat-y
+
+   -----------------------------------------------
+
+   background-size → tamanho da imagem de fundo
+   Exemplo: background-size: cover;
+   Valores: cover (cobre tudo) | contain (mostra tudo) | 500px | 100%
+
+   -----------------------------------------------
+
+   background-position → posição da imagem de fundo
+   Exemplo: background-position: center top;
+   Valores: center | top | bottom | left | right
+
+   -----------------------------------------------
+
+   background → atalho para tudo acima de uma vez
+   Exemplo: background: lightblue url("./img/bicicleta.jpg") no-repeat cover center top;
+
+   -----------------------------------------------
+
+   linear-gradient → gradiente em linha reta
+   Exemplo:
+   background-image: linear-gradient(
+       to right,        ← direção
+       lightblue 0%,    ← cor e onde começa
+       lightcoral 10%,
+       blue 20%,
+       green 30%
+   );
+   Direções: to right | to left | to bottom | to top | 45deg
+
+   -----------------------------------------------
+
+   radial-gradient → gradiente em forma circular
+   Exemplo: background-image: radial-gradient(circle, blue, red, green);
+   ⚠️ circle = circular | ellipse = oval (padrão)
+
+   ============================================= */
+
+.bicicleta {
+  height: 600px;
+  background-color: lightblue;
+  background-image: url("./img/bicicleta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  /* background: lightblue url("./img/bicicleta.jpg") no-repeat cover center top; */
+  display: flex;
+}
+
+h1 {
+  margin: auto;
+  background: white;
+  padding: 1rem 2rem;
+}
+
+.pattern {
+  height: 300px;
+  background-color: lightcoral;
+  background-image: url("./img/pattern.svg");
+  background-repeat: repeat; /* tem como dar repeat x e repeat y, onde no x ele repete para horizontal e y na vertical */
+  /* background-size: 500px; */
+}
+
+.linear {
+  height: 200px;
+  background-image: linear-gradient(
+    to right,
+    lightblue 0%,
+    lightcoral 10%,
+    blue 20%,
+    green 30%
+  );
+}
+
+.radial {
+  height: 200px;
+  background-image: radial-gradient(circle, blue, red, green);
+}

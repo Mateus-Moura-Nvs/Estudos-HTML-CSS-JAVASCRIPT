@@ -1,0 +1,118 @@
+body{
+    background: #202A33;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+/* cabeça do site */
+header h1{
+    color: #C3CBD0;
+    text-align: center;   
+}
+
+.menu ul{
+    display: flex;
+    gap: 70px;  
+    justify-content: center;
+    list-style:  none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #D6C7A8;
+    padding: 10px;
+    background: #40364B;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.menu a:hover{
+background: #53616B;
+}
+
+.menu li::before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(#caf, #fff);
+    border: 2px solid #caf;
+    margin-right: 10px;
+    border-radius: 50%;
+} 
+.menu a:focus { background: #6a7a85; }
+.menu a:active { background: #2a2535; }
+/* _______________________________________ */
+/* Corpo do site */
+
+
+section{
+    text-align: center;
+    color: #ccb695;
+    background-image: url(./img/livros.jpg);
+    border-radius: 7px;
+    padding: 1rem;
+    opacity: 0.7;
+}
+section a{
+    text-decoration: none;
+    color: #C3CBD0;   
+    transition: 0.3s;
+}
+section a:hover{
+    color: #53616B;
+}
+
+h2{
+    text-align: center;
+    color: #caf;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+.grid h3{
+    color: #53616B;
+}
+.grid a{
+    color: #D6C7A8;
+    padding: 0.7rem;
+    background: #35443C;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.grid a:hover{
+    background: #506056;
+    color: #C5CDC5;
+}
+/* _______________________________________ */
+/* footer */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 1rem);
+    font-size: larger;
+    opacity: 0.6;
+    text-align: center;
+    color: #fff;
+}
+
+footer::before{
+  content: "";
+  display: block;
+  width: 400px;
+  margin-left: 45rem;
+  height: 4px;
+  background: #caf;
+}
+footer::after{
+  content: "";
+  display: block;
+  width: 400px;
+  height: 4px;
+  background: #caf;
+}
+/* _______________________________________ */

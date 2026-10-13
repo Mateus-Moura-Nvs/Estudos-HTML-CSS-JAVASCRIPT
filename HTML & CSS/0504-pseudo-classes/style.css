@@ -1,0 +1,105 @@
+/* =============================================
+   PSEUDO-CLASSES
+   =============================================
+
+   → São estados ou posições especiais de elementos
+   → Sintaxe: elemento:pseudo-classe { }
+
+   -----------------------------------------------
+
+   ESTADOS DE LINKS E BOTÕES:
+
+   :hover  → quando o mouse passa por cima
+   :focus  → quando o elemento está em foco (tab ou clique)
+   :active → quando o elemento está sendo clicado
+   :visited → quando o link já foi visitado
+   ⚠️ Nunca remova o :focus (acessibilidade!) — se quiser
+   mudar o visual, estilize, mas não use outline: none
+
+   -----------------------------------------------
+
+   SELETORES DE POSIÇÃO (filhos):
+
+   :first-child → seleciona o primeiro filho
+   :last-child  → seleciona o último filho
+   :nth-child(n) → seleciona o filho de posição n
+   Exemplo: li:nth-child(3) → seleciona o 3º li
+
+   :nth-child(2n) → seleciona de 2 em 2 (pares)
+   :nth-child(3n) → seleciona de 3 em 3
+   :nth-child(4n) → seleciona de 4 em 4
+
+   -----------------------------------------------
+
+   :not() → seleciona tudo EXCETO o que está dentro
+   Exemplo: li:not(:first-child, :last-child, .terceiro)
+   → seleciona todos os li exceto o primeiro, último e .terceiro
+
+   Exemplo: h2:not(.contato)
+   → seleciona todos os h2 exceto os que têm classe .contato
+
+   -----------------------------------------------
+
+   transition → suaviza a mudança entre estados
+   Exemplo: transition: 0.3s;
+   ⚠️ Coloca no elemento normal, não no :hover
+
+   ============================================= */
+
+
+a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-family: Arial;
+  text-decoration: none;
+  background: #caf;
+  color: #217;
+  /* transition: 0.3s; */
+}
+
+a:hover {
+  background: #adf;
+  color: #147;
+}
+
+a:focus {
+  background: #cfa;
+  color: #371;
+  /* outline: none; */
+  /* border: 2px solid red; */
+}
+
+a:active {
+  background: #ffa;
+  color: #761;
+}
+
+/* a:visited {
+  background: #fda;
+  color: #731;
+} */
+
+.lista-1 li:first-child {
+  background: #caf;
+}
+
+.lista-1 li:last-child {
+  background: #cfa;
+}
+
+.lista-1 li:nth-child(3) {
+  background: #cfa;
+}
+
+.lista-2 li:nth-child(4n) {
+  background: #cfa;
+}
+
+.lista-3 li:not(:first-child, :last-child, .terceiro) {
+  background: #caf;
+}
+
+h2:not(.contato) {
+  text-decoration: underline;
+}

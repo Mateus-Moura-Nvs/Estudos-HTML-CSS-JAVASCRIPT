@@ -1,0 +1,71 @@
+
+/* =============================================
+   UNIDADES DE MEDIDA
+   =============================================
+
+   PX - Pixels
+   Valor fixo, não muda com nada
+   Use para: bordas, sombras, coisas que não devem escalar
+   Exemplo: font-size: 16px;
+
+   -----------------------------------------------
+
+   REM - Root EM
+   Relativo ao font-size do <html> (padrão = 16px)
+   1rem = 16px | 2rem = 32px | 0.5rem = 8px
+   Use para: font-size, padding, margin
+   Escala com as preferências do usuário
+   Exemplo: font-size: 1rem;
+
+   -----------------------------------------------
+
+   EM - Element EM
+   Relativo ao font-size do ELEMENTO PAI
+   ⚠️ Cuidado: pode acumular se tiver elementos aninhados
+   Use para: padding e margin internos de componentes
+   Exemplo: font-size: 1em;
+
+   -----------------------------------------------
+
+   VH - Viewport Height
+   1vh = 1% da altura da tela
+   100vh = altura total da tela
+   Use para: seções hero, telas full height
+   Exemplo: height: 100vh;
+
+   -----------------------------------------------
+
+   VW - Viewport Width
+   1vw = 1% da largura da tela
+   100vw = largura total da tela
+   Use para: elementos que ocupam a largura toda
+   Exemplo: width: 100vw;
+
+   ============================================= */
+
+
+a{
+    text-decoration: none;
+    color: white;
+    background: darkblue;
+    display: inline-block;
+}
+
+p{
+    background: lightblue;
+}
+
+.px{
+
+    font-size: 24px;
+    padding: 16px 32px;
+}
+html{
+
+}
+
+.rem{
+    font-size: 1rem;
+    padding: 1rem 2rem;
+
+}

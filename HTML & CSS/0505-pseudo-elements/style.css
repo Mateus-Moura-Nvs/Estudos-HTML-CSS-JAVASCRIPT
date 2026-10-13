@@ -1,0 +1,79 @@
+/* =============================================
+   PSEUDO-ELEMENTOS
+   =============================================
+
+   → Criam elementos "fantasmas" antes ou depois
+     do conteúdo real, sem precisar de HTML extra
+   → Sintaxe: elemento::pseudo-elemento { }
+   → ⚠️ Sempre precisam de content: ""; para funcionar
+      (pode ficar vazio, mas tem que estar lá)
+
+   -----------------------------------------------
+
+   ::before → insere um elemento ANTES do conteúdo
+   ::after  → insere um elemento DEPOIS do conteúdo
+
+   Exemplo — linha decorativa abaixo do h1:
+   h1::after {
+     content: "";
+     display: block;
+     width: 40px;
+     height: 4px;
+     background: #caf;
+   }
+
+   -----------------------------------------------
+
+   USO COMUM — marcador personalizado de lista:
+   (substitui o list-style padrão por um elemento customizado)
+
+   ul { list-style: none; } ← remove o marcador padrão
+
+   li::before {
+     content: "";
+     display: inline-block;
+     width: 8px;
+     height: 8px;
+     background: linear-gradient(#caf, #fff);
+     border: 2px solid #caf;
+     border-radius: 50%;    ← deixa redondo
+     margin-right: 10px;    ← espaço entre o marcador e o texto
+   }
+
+   -----------------------------------------------
+
+   DIFERENÇA: pseudo-classe x pseudo-elemento
+   :hover      → estado do elemento (uma ":")
+   ::before    → elemento novo criado (duas "::")
+
+   ============================================= */
+
+
+h1::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #caf;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(#caf, #fff);
+  border: 2px solid #caf;
+  margin-right: 10px;
+  border-radius: 50%;
+}

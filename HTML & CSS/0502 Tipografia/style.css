@@ -1,0 +1,85 @@
+/* 
+Colocar Varias fontes assim serve para caso alguma não esteja instalada 
+na máquina do usuário, o site vai carregando uma a outra, até conseguir
+*/
+/* =============================================
+   TIPOGRAFIA
+   =============================================
+
+   font-size → tamanho da fonte
+   Exemplo: font-size: 2rem;
+
+   -----------------------------------------------
+
+   font-family → família da fonte
+   Coloca várias fontes: se a primeira não estiver
+   instalada, o browser tenta a próxima, até achar uma
+   Exemplo: font-family: Georgia, 'Times New Roman', Times, serif;
+
+   -----------------------------------------------
+
+   font-weight → peso da fonte (espessura)
+   Exemplo: font-weight: bold;
+   Valores: normal | bold | 100 a 900
+
+   -----------------------------------------------
+
+   font-style → estilo da fonte
+   Exemplo: font-style: italic;
+
+   -----------------------------------------------
+
+   line-height → altura da linha (espaço entre linhas)
+   Exemplo: line-height: 1.4;
+   ⚠️ Sem unidade é o recomendado (multiplica pelo font-size)
+
+   -----------------------------------------------
+
+   text-decoration → decoração do texto
+   Exemplo: text-decoration: none;
+   Valores: none | underline | line-through | overline
+
+   -----------------------------------------------
+
+   text-transform → transformação do texto
+   Exemplo: text-transform: uppercase;
+   Valores: uppercase | lowercase | capitalize
+
+   -----------------------------------------------
+
+   text-indent → recuo da primeira linha
+   Exemplo: text-indent: 5rem;
+
+   -----------------------------------------------
+
+   text-align → alinhamento do texto
+   Exemplo: text-align: center;
+   Valores: left | right | center | justify
+
+   -----------------------------------------------
+
+   text-shadow → sombra no texto
+   Exemplo: text-shadow: 5px 5px 10px gray;
+   Ordem:   horizontal | vertical | blur | cor
+
+   -----------------------------------------------
+
+   letter-spacing → espaço entre letras
+   Exemplo: letter-spacing: 0.5rem;
+
+   ============================================= */
+
+p{
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    /* font-style: italic; */
+    line-height: 1.4;
+    text-decoration: none;
+    /* text-transform: capitalize, uppercase, lowercase;  */
+    text-indent: 5rem;
+    /* text-align: right, center, left, justify; */
+    /* text-shadow: 5px 5px 10px gray; */
+    letter-spacing: 0.5rem;
+
+}
