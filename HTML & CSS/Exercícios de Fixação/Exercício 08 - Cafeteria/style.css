@@ -1,0 +1,139 @@
+body{
+    background: wheat;
+}
+
+/* cabeça do site */
+h1 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    list-style: none;
+}
+li::before{
+    content: "☕ ";
+    font-size: 0.9em;
+    margin-right: 1rem;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #2C221E;
+    font-size: 1.3rem;
+    background: #C87D55;
+    padding: 0.6rem;
+    border-radius: 0.7rem;
+    opacity: 0.8;
+    font-style: oblique;
+    transition: 0.2s;
+}
+.menu a:hover{
+    background: #E8D8C8;
+    color: #FAF8F5;
+}
+.menu a:active{
+    background: #2B2B2B;
+    color: #8C6D58;
+}
+
+/* Hero do Site */
+
+.Hero{
+height: 30vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-image: url(./img/café.jpg);
+background-position: center 60%;
+background-size: cover;
+color: black;
+font-size: 1.5rem;
+border-radius: 1rem;
+}
+
+.Hero h2{
+font-size: 1.5rem;
+color: #2C221E;
+}
+
+.Hero a{
+color: #2C221E;
+text-decoration: none;
+background: #C87D55;
+opacity: 0.5;
+border-radius: 0.3rem;
+padding: 0.6rem;
+transition: 0.3s;
+}
+.Hero a:hover{
+background: #E8D8C8;
+color: #2B2B2B;
+}
+.Hero a:active{
+background:#E8D8C8;
+color: black;
+}
+
+/* corpo do site */
+
+.grids{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.grids a{
+text-decoration: none;
+background: #FAF8F5;
+color: #1E1B18;
+font-style: oblique;
+border-radius: 0.4rem;
+padding: 0.6rem;
+
+transition: 0.3s;
+}
+.grids a:hover{
+background: #E8D8C8;
+color: #2B2B2B;
+}
+.grids a:active{
+background:#E8D8C8;
+color: black;
+}
+
+
+
+
+
+/* footer do site */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 1rem);
+    font-size: larger;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+footer::before {
+    content: "";
+    width: 5rem;
+    height: 0.2rem;
+    background: #2C221E;
+}
+
+footer::after {
+    content: "";
+    width: 5rem;
+    height: 0.2rem;
+    background: #2C221E;
+}
